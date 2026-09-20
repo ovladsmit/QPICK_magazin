@@ -1,0 +1,10 @@
+.switcher{
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font: var(--font-15-500);
+}
+
+.active{
+  color: var(--new-price-color);
+}

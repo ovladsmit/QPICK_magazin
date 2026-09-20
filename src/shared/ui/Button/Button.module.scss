@@ -1,0 +1,40 @@
+.clear{
+  font: var(--font-17-600);
+  color: var(--buy-button-color);
+  transition-property: color, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &:hover{
+    color: var(--new-price-color);
+  }
+  &:focus-visible{
+    outline: 2px solid var(--new-price-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.black{
+  background: var(--bg-buy-button);
+  color: var(--registration-button-color);
+  border-radius: 20px;
+  font: var(--font-17-600);
+  padding: 22px 63.48px;
+  transition-property: background-color, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &:hover{
+    color: var(--new-price-color);
+  }
+  &:focus-visible{
+    outline: 2px solid var(--new-price-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

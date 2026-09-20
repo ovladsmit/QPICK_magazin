@@ -1,0 +1,16 @@
+.icon{
+  font: var(--font-25-700);
+  color: var(--logo-color);
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &:hover{
+    color: var(--new-price-color);
+  }
+
+  &:focus-visible{
+    outline: 2px solid var(--new-price-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}

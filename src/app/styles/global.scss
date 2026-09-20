@@ -1,0 +1,31 @@
+:root {
+  //Шрифты
+  --font-family-main: Montserrat, "Times New Roman", serif;
+  --font-25-700: normal 700 25px / normal var(--font-family-main);
+  --font-20-600: normal 600 20px / normal var(--font-family-main);
+  --font-17-600: normal 600 17px / normal var(--font-family-main);
+  --font-17-500: normal 500 17px / normal var(--font-family-main);
+  --font-17-400: normal 400 17px / normal var(--font-family-main);
+  --font-15-500: normal 500 15px / normal var(--font-family-main);
+  --font-15-600: normal 600 15px / normal var(--font-family-main);
+  --font-15-700: normal 700 15px / normal var(--font-family-main);
+  --font-13-600: normal 600 13px / normal var(--font-family-main);
+
+  //Цвета
+  --primary-color: #1C1C27;
+  --logo-color: #101010;
+  --secondary-color:#838383;
+  --new-price-color: #FFA542;
+  --old-price-color: #FFCE7F;
+  --price-cart-color: #AAA;
+  --buy-button-color: #000;
+  --link-color:#000;
+  --registration-button-color: #fff;
+  --count-color: #fff;
+
+  //Цвета заднего фона
+  --bg-page-color: #EAEAEA;
+  --bg-surface-color: #fff;
+  --bg-buy-button: #000;
+
+}

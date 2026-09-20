@@ -1,0 +1,35 @@
+.countIcon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &:hover{
+    background: var(--bg-surface-color);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--new-price-color);
+    outline-offset: 2px;
+  }
+}
+
+.count{
+  position: absolute;
+  display: flex;
+  top: 12px;
+  right: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 17.4px;
+  height: 17.4px;
+  border-radius: 50%;
+  font: var(--font-15-500);
+  color: var(--count-color);
+  background: var(--new-price-color);
+}

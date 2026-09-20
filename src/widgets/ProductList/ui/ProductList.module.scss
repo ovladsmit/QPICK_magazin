@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.nameList{
+  font: var(--font-20-600);
+  color: var(--secondary-color);
+}
+.productList{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
