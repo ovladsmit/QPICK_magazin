@@ -1,75 +1,54 @@
-# React + TypeScript + Vite
+# QPICK — интернет-магазин аудиотехники
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Тестовое задание: одностраничное приложение (SPA) магазина наушников и аудиоаксессуаров с каталогом товаров и корзиной.
 
-Currently, two official plugins are available:
+## Стек технологий
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript**
+- **Vite** — сборка проекта
+- **React Router** — маршрутизация
+- **Redux Toolkit** — состояние корзины
+- **SCSS Modules** — стилизация компонентов
+- **i18next / react-i18next** — интернационализация (RU/EN)
+- **clsx** — условное объединение классов
 
-## React Compiler
+Архитектура — **Feature-Sliced Design** (слои `app → pages → widgets → features → entities → shared`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Возможности
 
-## Expanding the ESLint configuration
+- Каталог товаров по категориям
+- Быстрый просмотр товара в модальном окне
+- Добавление товара в корзину, изменение количества, удаление
+- Переключение языка интерфейса (Рус/Eng)
+- Адаптивная сетка карточек товаров
+- Hover- и focus-эффекты для интерактивных элементов
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Запуск проекта
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Приложение будет доступно на `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Скрипты
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Команда           | Описание                          |
+|--------------------|------------------------------------|
+| `npm run dev`      | запуск дев-сервера                |
+| `npm run build`    | сборка проекта                    |
+| `npm run lint`     | проверка кода ESLint              |
+| `npm run preview`  | превью собранного билда           |
 
+## Структура проекта
+
+```
+src/
+├── app/          # инициализация приложения, роутинг, глобальные стили, провайдеры
+├── pages/        # страницы (каталог, корзина)
+├── widgets/      # крупные составные блоки (хедер, футер, список товаров, список корзины)
+├── features/     # пользовательские сценарии (переключение языка)
+├── entities/     # бизнес-сущности (товар, корзина) — данные + презентационные компоненты
+└── shared/       # переиспользуемые UI-компоненты, конфиги, утилиты
 ```

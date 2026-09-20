@@ -21,7 +21,7 @@ export const Header = ({ className }: HeaderProps) => {
     <header className={clsx(className, styles.header)}>
       <Logo />
       <nav className={styles.icon}>
-        <CountIcon icon={<HeartIcon />} count={2} />
+        <CountIcon icon={<HeartIcon />} />
         <CountIcon icon={<CartIcon />} count={Number(cartCount)} onClick={() => navigate(ROUTES.CART)} />
       </nav>
     </header>

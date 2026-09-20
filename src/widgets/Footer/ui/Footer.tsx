@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import VkIcon from '@/shared/assets/icons/vk.svg?react';
 import TelegramIcon from '@/shared/assets/icons/telegram.svg?react';
 import WhatsappIcon from '@/shared/assets/icons/whatsapp.svg?react';
+import { ROUTES } from '@/shared';
 interface FooterProps {
   /*Доп классы*/
   className?: string;
@@ -21,7 +22,7 @@ export const Footer = ({ className }: FooterProps) => {
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li><Link className={styles.link} to=''>{t('Избранное')}</Link></li>
-          <li><Link className={styles.link} to=''>{t('Корзина')}</Link></li>
+          <li><Link className={styles.link} to={ROUTES.CART}>{t('Корзина')}</Link></li>
           <li><Link className={styles.link} to=''>{t('Контакты')}</Link></li>
         </ul>
         <div className={styles.secondary}>

@@ -4,6 +4,7 @@
   transition-property: color;
   transition-duration: 0.2s;
   transition-timing-function: ease;
+
   &:hover{
     color: var(--new-price-color);
   }

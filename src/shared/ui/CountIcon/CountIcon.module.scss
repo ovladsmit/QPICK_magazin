@@ -10,9 +10,11 @@
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: ease;
+
   &:hover{
     background: var(--bg-surface-color);
   }
+
   &:focus-visible {
     outline: 2px solid var(--new-price-color);
     outline-offset: 2px;
