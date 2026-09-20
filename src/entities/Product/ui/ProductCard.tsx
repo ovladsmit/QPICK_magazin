@@ -4,6 +4,9 @@ import styles from './ProductCard.module.scss';
 import Star from "@/shared/assets/icons/star.svg?react"
 import { Button } from '@/shared';
 import { useTranslation } from 'react-i18next';
+import { Modal } from '@/shared';
+import { useState } from 'react';
+import { ProductInfo } from './ProductInfo';
 interface ProductCardProps {
   /*Доп классы*/
   className?: string;
@@ -16,9 +19,14 @@ interface ProductCardProps {
 
 export const ProductCard = ({ className, product, onBuyClick }: ProductCardProps) => {
   const { img, title, price, oldPrice, rate } = product
-  const {t} = useTranslation()
+  const [isOpen, setIsOpen] = useState(false)
+  const { t } = useTranslation()
+  const handleButBitton = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    onBuyClick?.();
+  }
   return (
-    <li className={clsx(styles.card, className)}>
+    <li onClick={() => setIsOpen(true)} className={clsx(styles.card, className)}>
       <img className={styles.image} src={img} alt={title} />
       <div className={styles.footer}>
         <div className={styles.topRow}>
@@ -31,12 +39,13 @@ export const ProductCard = ({ className, product, onBuyClick }: ProductCardProps
 
         <div className={styles.bottomRow}>
           <div className={styles.rating}>
-            <Star className={styles.star}/>
+            <Star className={styles.star} />
             <span>{rate}</span>
           </div>
-          <Button onClick={onBuyClick}>{t("Купить")}</Button>
+          <Button onClick={handleButBitton}>{t("Купить")}</Button>
         </div>
       </div>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}><ProductInfo product={product} onBuyClick={onBuyClick} /></Modal>
     </li>
   );
 };

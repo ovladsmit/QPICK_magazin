@@ -1,0 +1,57 @@
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.image {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font: var(--font-20-600);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priceNew {
+  font: var(--font-17-600);
+  color: var(--new-price-color);
+}
+
+.priceOld {
+  font: var(--font-13-600);
+  color: var(--old-price-color);
+  text-decoration-line: line-through;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: var(--font-17-600);
+  color: var(--secondary-color);
+}
+
+.star {
+  color: var(--old-price-color);
+  width: 23.333px;
+  height: 21.926px;
+}
