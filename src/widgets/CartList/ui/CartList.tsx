@@ -8,6 +8,9 @@ import { Button, ThemeButton } from '@/shared';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/shared';
+import { Modal } from '@/shared';
+
+import { useState } from 'react';
 interface CartListProps {
   /*Доп классы*/
   className?: string;
@@ -19,7 +22,7 @@ interface CartListProps {
 export const CartList = ({ className, item }: CartListProps) => {
   const {t} = useTranslation()
   const dispatch = useDispatch()
-
+  const [isOpen, setIsOpen] = useState(false)
   const removeButtonClick = (item: CartItemType) => {
     dispatch(removeItem(item.product.id))
   }
@@ -29,6 +32,10 @@ export const CartList = ({ className, item }: CartListProps) => {
   }
   const decrementButtonClick = (item: CartItemType) => {
     dispatch(decrementCount(item.product.id))
+  }
+
+  const handleButton = () => {
+    setIsOpen(true)
   }
   const totalPrice = useSelector(selectCartTotalPrice)
 
@@ -54,8 +61,11 @@ export const CartList = ({ className, item }: CartListProps) => {
             <span>{t("Итого")}</span>
             <span>{totalPrice} ₽</span>
           </div>
-          <Button theme={ThemeButton.BLACK}>{t("Перейти к оформлению")}</Button>
+          <Button onClick={handleButton} theme={ThemeButton.BLACK}>{t("Перейти к оформлению")}</Button>
       </div>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        
+      </Modal>
     </section>
 
 
