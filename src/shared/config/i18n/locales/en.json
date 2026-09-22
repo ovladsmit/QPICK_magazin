@@ -9,5 +9,12 @@
   "Перейти к оформлению": "Go to checkout",
   "Итого": "Total",
   "Корзина пуста": "The basket is empty",
-  "Перейти в каталог": "Go to the catalog"
+  "Перейти в каталог": "Go to the catalog",
+  "Оформление заказа": "Order placement",
+  "Телефон": "Phone",
+  "Имя": "Name",
+  "Адрес доставки": "Delivery address",
+  "Подтвердить заказ": "Confirm the order",
+  "Заказ оформлен": "The order has been placed.",
+  "Мы свяжемся с вами в ближайшее время": "We will contact you soon."
 }

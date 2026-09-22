@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/shared';
 import { Modal } from '@/shared';
+import { CheckoutForm } from '@/features/CheckoutForm';
 
 import { useState } from 'react';
 interface CartListProps {
@@ -64,7 +65,7 @@ export const CartList = ({ className, item }: CartListProps) => {
           <Button onClick={handleButton} theme={ThemeButton.BLACK}>{t("Перейти к оформлению")}</Button>
       </div>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        
+        <CheckoutForm/>
       </Modal>
     </section>
 
