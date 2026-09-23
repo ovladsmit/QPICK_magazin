@@ -14,6 +14,7 @@ export const headphones: Product[] = [
     price: 2927,
     oldPrice: 3527,
     rate: 4.7,
+    description: 'Проводные наушники с чистым звуком и удобной посадкой для повседневного использования.',
   },
   {
     id: '2',
@@ -21,6 +22,7 @@ export const headphones: Product[] = [
     title: 'Apple EarPods',
     price: 2327,
     rate: 4.5,
+    description: 'Классические проводные наушники с разъёмом Lightning и сбалансированным звучанием.',
   },
   {
     id: '3',
@@ -28,6 +30,7 @@ export const headphones: Product[] = [
     title: 'Apple EarPods',
     price: 2327,
     rate: 4.5,
+    description: 'Классические проводные наушники с разъёмом Lightning и сбалансированным звучанием.',
   },
   {
     id: '4',
@@ -35,6 +38,7 @@ export const headphones: Product[] = [
     title: 'Apple BYZ S852I',
     price: 2927,
     rate: 4.7,
+    description: 'Проводные наушники с чистым звуком и удобной посадкой для повседневного использования.',
   },
   {
     id: '5',
@@ -42,6 +46,7 @@ export const headphones: Product[] = [
     title: 'Apple EarPods',
     price: 2327,
     rate: 4.5,
+    description: 'Классические проводные наушники с разъёмом Lightning и сбалансированным звучанием.',
   },
   {
     id: '6',
@@ -49,8 +54,8 @@ export const headphones: Product[] = [
     title: 'Apple EarPods',
     price: 2327,
     rate: 4.5,
+    description: 'Классические проводные наушники с разъёмом Lightning и сбалансированным звучанием.',
   },
-  
 ]
 
 export const wirelessHeadphones: Product[] = [
@@ -60,6 +65,7 @@ export const wirelessHeadphones: Product[] = [
     title: 'Apple AirPods',
     price: 9527,
     rate: 4.7,
+    description: 'Беспроводные наушники с быстрым подключением и автономностью на весь день.',
   },
   {
     id: '5',
@@ -67,6 +73,7 @@ export const wirelessHeadphones: Product[] = [
     title: 'GERLAX GH-04',
     price: 6527,
     rate: 4.7,
+    description: 'Компактные беспроводные наушники с чехлом-кейсом для зарядки и удобной посадкой.',
   },
   {
     id: '6',
@@ -74,5 +81,6 @@ export const wirelessHeadphones: Product[] = [
     title: 'BOROFONE BO4',
     price: 7527,
     rate: 4.7,
+    description: 'Беспроводные наушники с понятным управлением и стабильным Bluetooth-соединением.',
   },
 ]

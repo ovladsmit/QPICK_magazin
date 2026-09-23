@@ -5,4 +5,5 @@ export interface Product {
   price: number
   oldPrice?: number
   rate: number
+  description: string
 }
